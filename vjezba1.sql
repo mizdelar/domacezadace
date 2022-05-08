@@ -26,3 +26,4 @@ create table djecjivrtic(
     odgajateljica varchar(50),
     strucnasprema varchar(50)
 );
+ovo je za test
