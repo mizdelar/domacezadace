@@ -7,3 +7,7 @@ create table doktorskaordinacija(
     pacijent varchar(50),
     maedicinskasestra varchar(50)
 );
+
+
+
+test123

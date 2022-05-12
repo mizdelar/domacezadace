@@ -7,3 +7,8 @@ create table frizerskisalon(
     korisnik varchar(50),
     usluga varchar(50)
 );
+
+
+
+
+test 123
