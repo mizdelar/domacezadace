@@ -9,6 +9,7 @@ create table zaposlenik(
     ime varchar(20) not null,
     prezime varchar(20) not null,
     placa decimal(18,2) not null,
+    oib char(11) not null,
     nadredjeni int not null
 );
 
