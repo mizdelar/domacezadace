@@ -16,7 +16,7 @@ create table djecjaradionica(
 create table dijete(
     sifra int not null primary key auto_increment,
     osoba int not null,
-    uzrast int
+    uzrast int not null
 );
 
 create table uciteljica(
@@ -38,4 +38,20 @@ create table osoba(
 alter table dijete add foreign key (osoba) references osoba(sifra);
 alter table uciteljica add foreign key (osoba) references osoba(sifra);
 
+insert into djecjaradionica(naziv,brojdjeceuradionici,djecjivrticradionice)
+values ('Tratincica',5,'Maslacak');
+
+insert into osoba (ime,prezime,oib,datumrodjenja)
+values ('Pero','Peric',11111111111,'2022-12-12');
+
+insert into uciteljica (osoba,strucnasprema,visinaplace)
+values (1,'vss',5666.88);
+
+insert into osoba (ime,prezime,oib,datumrodjenja)
+values ('Marko','Markic',22222222222,'2012-12-12');
+
+
+
+insert into uciteljica (osoba,strucnasprema,visinaplace)
+values (2,'sss',3232.99);
 
