@@ -7,15 +7,15 @@ use zupanije3;
 
 create table zupanija(
     sifra int not null primary key auto_increment,
-    naziv varchar(50),
+    naziv varchar(50) not null,
     zupan int not null
 
 );
 
 create table zupan(
     sifra int not null primary key auto_increment,
-    ime varchar(50),
-    prezime varchar(50)
+    ime varchar(50) not null,
+    prezime varchar(50) not null
 );
 
 create table opcina(
