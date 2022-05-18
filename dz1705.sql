@@ -129,14 +129,10 @@ insert into osoba (sifra,prezime,ime,oib,email) values
 
 
 
-# 1,2
-insert into predavac (sifra,osoba,iban)
-values (null,1,null),(null,2,null);
 
 
-# 1 - 12
-insert into polaznik (sifra,osoba, brojugovora) values
-(null,3,null),(null,4,null),(null,5,null);
+
+
 
 # DZ
 # Unesite sebe kao predavača
