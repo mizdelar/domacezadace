@@ -1,6 +1,6 @@
 # hash je komentar
 # Sljedeću liniju bez početnog hash znaka izvesti u cmd
-# C:\xampp\mysql\bin\mysql -uroot --default_character_set=utf8 < C:\Users\mzdel\Documents\github\mizdelar\vjezbadatabse\EdunovaJP26\SQL\edunovajp26.sql
+# C:\xampp\mysql\bin\mysql -uroot < c:\users\mzdel\documents\github\mizdelar\domacezadace\dz1705.sql
 
 drop database if exists edunovajp26;
 create database edunovajp26;
@@ -114,9 +114,9 @@ null,'shaki@gmail.com');
 
 # 3 - 14
 insert into osoba (sifra,prezime,ime,oib,email) values
-(null,'Županić','Marko',null,'marko.zupanic8@gmail.com'),
-(null,'Borić','Alen',null,'boricalen@live.com'),
-(null,'Ramač','Dino',null,'dinoramac@gmail.com'),
+(null,'Zdelar','Ana',null,'marko.zupanic8@gmail.com'),
+(null,'Zdelar','Josip',null,'boricalen@live.com'),
+(null,'Zdelar','Robert',null,'dinoramac@gmail.com'),
 (null,'Fratrić','Ivana',null,'ivana.fratric1@gmail.com'),
 (null,'Prgić','Mihael',null,'mihaelp243@gmail.com'),
 (null,'Skorup','Marko',null,'mskorup@gmail.com'),
@@ -136,29 +136,7 @@ values (null,1,null),(null,2,null);
 
 # 1 - 12
 insert into polaznik (sifra,osoba, brojugovora) values
-(null,3,null),(null,4,null),(null,5,null),
-(null,6,null),(null,7,null),(null,8,null),
-(null,9,null),(null,10,null),(null,11,null),
-(null,12,null),(null,13,null),(null,14,null);
-
-
-insert into clan(grupa,polaznik) values
-(1,1),(1,2),(1,3),
-(1,4),(1,5),(1,6),
-(1,7),(1,8),(1,9),
-(1,10),(1,11),(1,12);
-
-
-update smjer set upisnina=600 where sifra=1;
-
-update smjer set 
-cijena=5000,
-trajanje=100
-where sifra=2;
-
-update grupa set predavac=1 where sifra=1;
-
-delete from smjer where sifra=3;
+(null,3,null),(null,4,null),(null,5,null);
 
 # DZ
 # Unesite sebe kao predavača
@@ -179,3 +157,15 @@ insert into smjer (sifra,naziv,trajanje,cijena,upisnina,certificiran)
 values (null,'Tehničar za mrežu',500,600,700,null);
 
 update predavac set iban='hr22222222222' where sifra=5;
+
+insert into polaznik (sifra,osoba,brojugovora)
+
+values (null,3,null),(null,4,null),(null,5,null);
+
+insert into clan (sifra,grupa,polaznik)
+
+values (null,1,1),(null,1,2);
+
+insert into clan (sifra,grupa,polaznik)
+
+values (null,2,3);
