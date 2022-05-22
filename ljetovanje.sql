@@ -17,7 +17,9 @@ create table apartman(
 
 create table turist(
     sifra int not null primary key auto_increment,
-    osoba int not null,
+    ime varchar(50),
+    prezime varchar (50),
+    oib char(11),
     zemljporijekla varchar(50),
     prijevoznosredstvo varchar(50)
 
@@ -25,6 +27,9 @@ create table turist(
 
 create table djelatnik(
     sifra int not null primary key auto_increment,
+    ime varchar(50),
+    prezime varchar (50),
+    oib char(11),
     osoba int not null,
     visinaplace decimal (18,2) not null,
     strucnasprema varchar(50)
@@ -38,15 +43,6 @@ create table plaza(
     placanje boolean
 );
 
-create table osoba(
-    sifra int not null primary key auto_increment,
-    ime varchar(50),
-    prezime varchar (50),
-    oib char(11)
-
-);
 
 alter table apartman add foreign key (turist) references turist(sifra);
-alter table turist add foreign key (osoba) references osoba(sifra);
-alter table djelatnik add foreign key (osoba) references osoba(sifra);
 alter table apartman add foreign key (plaza) references plaza(sifra);
