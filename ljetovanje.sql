@@ -30,8 +30,8 @@ create table djelatnik(
     ime varchar(50),
     prezime varchar (50),
     oib char(11),
-    osoba int not null,
     visinaplace decimal (18,2) not null,
+    godineradnogstaza varchar(50),
     strucnasprema varchar(50)
 );
 
@@ -45,7 +45,9 @@ create table plaza(
 
 create table termin(
     datumdolaska datetime,
-    datumodlaska datetime
+    datumodlaska datetime,
+    cijena decimal (18,2) not null,
+    turist varchar(50)
 );
 
 
