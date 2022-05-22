@@ -10,6 +10,7 @@ create table apartman(
     velicina decimal (18,2) not null,
     cijena decimal (18,2) not null,
     naziv varchar(50),
+    djelatnik int not null,
     plaza int not null,
     turist int not null
 
@@ -44,13 +45,31 @@ create table plaza(
 );
 
 create table termin(
+    sifra int not null primary key auto_increment,
     datumdolaska datetime,
     datumodlaska datetime,
     cijena decimal (18,2) not null,
-    turist varchar(50)
+    turist int not null
+);
+
+create table organizacijavremena(
+    sifra int not null primary key auto_increment,
+    aktivnostiuvodi varchar(50),
+    sportskeaktivnosti varchar(50),
+    izlet varchar(50),
+    turist int not null,
+    setnja varchar(50)
+
+
 );
 
 
-
+alter table apartman add foreign key (djelatnik) references djelatnik(sifra);
 alter table apartman add foreign key (turist) references turist(sifra);
 alter table apartman add foreign key (plaza) references plaza(sifra);
+alter table termin add foreign key (turist) references turist(sifra);
+alter table organizacijavremena add foreign key (turist) references turist(sifra);
+
+
+
+
