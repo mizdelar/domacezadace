@@ -43,6 +43,12 @@ create table plaza(
     placanje boolean
 );
 
+create table termin(
+    datumdolaska datetime,
+    datumodlaska datetime
+);
+
+
 
 alter table apartman add foreign key (turist) references turist(sifra);
 alter table apartman add foreign key (plaza) references plaza(sifra);
