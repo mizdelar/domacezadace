@@ -22,7 +22,8 @@ create table turist(
     prezime varchar (50),
     oib char(11),
     zemljporijekla varchar(50),
-    prijevoznosredstvo varchar(50)
+    prijevoznosredstvo varchar(50),
+    termin int
 
 );
 
@@ -69,6 +70,7 @@ alter table apartman add foreign key (turist) references turist(sifra);
 alter table apartman add foreign key (plaza) references plaza(sifra);
 alter table termin add foreign key (turist) references turist(sifra);
 alter table organizacijavremena add foreign key (turist) references turist(sifra);
+alter table turist add foreign key (termin) references termin(sifra);
 
 
 
