@@ -50,7 +50,7 @@ create table termin(
     datumdolaska datetime,
     datumodlaska datetime,
     cijena decimal (18,2) not null,
-    turist int not null
+    turist int
 );
 
 create table organizacijavremena(
@@ -58,7 +58,7 @@ create table organizacijavremena(
     aktivnostiuvodi varchar(50),
     sportskeaktivnosti varchar(50),
     izlet varchar(50),
-    turist int not null,
+    turist int,
     setnja varchar(50)
 
 
@@ -71,6 +71,7 @@ alter table apartman add foreign key (plaza) references plaza(sifra);
 alter table termin add foreign key (turist) references turist(sifra);
 alter table organizacijavremena add foreign key (turist) references turist(sifra);
 alter table turist add foreign key (termin) references termin(sifra);
+
 
 
 
