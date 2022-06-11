@@ -23,7 +23,7 @@ create table turist(
     oib char(11),
     zemljporijekla varchar(50),
     prijevoznosredstvo varchar(50),
-    bicikl varchar(50)
+    
     
 
 );
